@@ -48,3 +48,7 @@ j360系列之spring-boot微服务架构和docker部署
 - MockMvc测试
     - 测试用户界面调用接口
     
+    
+    
+##j360-profile##
+- hateoas演示案例

@@ -11,6 +11,7 @@
     <modules>
         <module>j360-deliver</module>
         <module>j360-order</module>
+        <module>j360-profile</module>
     </modules>
 
 
