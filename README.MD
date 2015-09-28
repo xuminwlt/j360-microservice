@@ -34,3 +34,17 @@ j360系列之spring-boot微服务架构和docker部署
 </dependency>
 ```
 
+##j360-deliver##
+- RestTemplate作为restAPI调用工具，需要定义@Bean
+- ExpressApiService使用netflix.hystrix确保分布式系统的持久性
+
+###测试##
+- 单元测试
+   - ExperssServiceTest
+      - 测试api接口调用实现
+      - 测试Hystrix在远程调用中的封装
+
+
+- MockMvc测试
+    - 测试用户界面调用接口
+    
