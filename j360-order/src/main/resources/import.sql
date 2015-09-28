@@ -1,0 +1,1 @@
+insert into express(no, cost) values ('1111', '100')
