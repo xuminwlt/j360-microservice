@@ -2,8 +2,8 @@ package me.j360.boot.microservice.deliver.test.service;
 
 import me.j360.boot.microservice.J360Application;
 import me.j360.boot.microservice.J360Configuration;
+import me.j360.boot.microservice.api.ExpressApi;
 import me.j360.boot.microservice.domain.Express;
-import me.j360.boot.microservice.service.ExpressApiService;
 import me.j360.boot.microservice.service.ExpressService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -37,9 +37,9 @@ public class ExperssServiceTest {
             .getLogger(J360Configuration.class);
 
     @Autowired
-    private ExpressApiService expressApiService;
-    @Autowired
     private ExpressService expressService;
+    @Autowired
+    private ExpressApi expressApi;
 
     @Test
     public void expressServiceTest(){
@@ -51,13 +51,10 @@ public class ExperssServiceTest {
     }
 
     @Test
-    public void apiTest(){
-        Map<String, Map<String, Object>>  map = expressApiService.getExpress(1l);
-        logger.info(map.get("cost").toString());
-
-        assertEquals(map.get("cost").toString(),"{cost=100.00}");
+    public void expressApiTest(){
+        Express express1 = expressApi.getExperss(1l);
+        logger.info(express1.getCost().toString());
     }
-
 
 
 }
