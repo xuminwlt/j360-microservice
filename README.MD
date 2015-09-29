@@ -43,7 +43,12 @@ j360系列之spring-boot微服务架构和docker部署
    - ExperssServiceTest
       - 测试api接口调用实现
       - 测试Hystrix在远程调用中的封装
-
+```
+使用restapi或许order的map属性
+      1、expressServiceTest 直接或许
+      2、expressApiTest 封装hystrix进行读取
+      3、通过aop-hystrix无侵入式读取
+```
 
 - MockMvc测试
     - 测试用户界面调用接口
