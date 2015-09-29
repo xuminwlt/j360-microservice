@@ -1,7 +1,5 @@
 package me.j360.boot.microservice;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.context.web.SpringBootServletInitializer;
@@ -18,9 +16,6 @@ import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 public class J360Configuration extends SpringBootServletInitializer {
-
-    private static final Logger logger = LoggerFactory
-            .getLogger(J360Configuration.class);
 
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {

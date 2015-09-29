@@ -1,14 +1,11 @@
 package me.j360.boot.microservice.deliver.test.service;
 
-import me.j360.boot.microservice.J360Application;
 import me.j360.boot.microservice.J360Configuration;
 import me.j360.boot.microservice.api.ExpressApi;
 import me.j360.boot.microservice.domain.Express;
 import me.j360.boot.microservice.service.ExpressService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.IntegrationTest;
@@ -35,8 +32,6 @@ import java.util.Map;
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = J360Configuration.class)
 public class ExperssServiceTest {
-    private static final Logger logger = LoggerFactory
-            .getLogger(J360Configuration.class);
 
     @Autowired
     private ExpressService expressService;
@@ -54,20 +49,17 @@ public class ExperssServiceTest {
     @Test
     public void expressServiceTest(){
         Express express = expressService.findOne(1l);
-        logger.info(express.getCost().toString());
         assertEquals(express.getCost().intValue(),100);
     }
 
     @Test
     public void expressApiTest(){
         Express express1 = expressApi.getExperss(1l);
-        logger.info(express1.getCost().toString());
     }
 
     @Test
     public void expressmapTest(){
         Map map = expressService.getMap(1l);
-        logger.info(((BigDecimal) map.get("cost")).toString());
     }
 
 }
