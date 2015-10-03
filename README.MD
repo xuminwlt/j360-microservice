@@ -56,4 +56,5 @@ j360系列之spring-boot微服务架构和docker部署
     
     
 ##j360-profile##
-- hateoas演示案例
+- hateoas演示案例 
+- hateoas restful
